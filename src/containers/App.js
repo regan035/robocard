@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import CardList from "./CardList";
-import SearchBox from "./SearchBox";
-import Scroll from "./Scroll";
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox";
+import Scroll from "../components/Scroll";
+import ErrorBoundry from "../components/ErrorBoundry";
 // using {}destructure for non-export default
 //import { robots } from "./robots";
 
@@ -29,25 +30,26 @@ class App extends Component {
   };
 
   render() {
+    //distructure for clean code
+    const { robots, searchfield } = this.state;
     //filter robots matches with input field
-    const filterRobots = this.state.robots.filter((robot) => {
-      return robot.name
-        .toLowerCase()
-        .includes(this.state.searchfield.toLowerCase());
+    const filterRobots = robots.filter((robot) => {
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     });
-    if (this.state.robots.length === 0) {
-      return <h1>Loading</h1>;
-    } else {
-      return (
-        <div className="tc">
-          <h1 className="f1">RoboFriends</h1>
-          <SearchBox searchChange={this.onSearchChange} />
-          <Scroll>
+    // if robots.length ===0
+    return !robots.length ? (
+      <h1>Loading</h1>
+    ) : (
+      <div className="tc">
+        <h1 className="f1">RoboFriends</h1>
+        <SearchBox searchChange={this.onSearchChange} />
+        <Scroll>
+          <ErrorBoundry>
             <CardList robots={filterRobots} />;
-          </Scroll>
-        </div>
-      );
-    }
+          </ErrorBoundry>
+        </Scroll>
+      </div>
+    );
   }
 }
 
