@@ -1,3 +1,6 @@
+// using 'export' instead of 'export default' because object and have multiple experts
+// 'export default' only export one instance
+
 export const robots = [
   {
     id: 1,
