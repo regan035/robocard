@@ -1,12 +1,18 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
+  //using destructure
+  const { name, email, id } = props;
+
   return (
-    <div className="bg-light-green dib br2 pa3 ma2 grow shadow-5">
-      <img alt="robots" src="https://robohash.org/test?200*200" />
+    <div className="tc bg-light-green dib br2 pa3 ma2 grow shadow-5">
+      {/* <img alt="robots" src={`https://robohash.org/${props.id}?200*200`} /> */}
+      <img alt="robots" src={`https://robohash.org/${id}?200*200`} />
       <div>
-        <h2>Jane Doe</h2>
-        <p>jane.doe@gmail.com</p>
+        {/* <h2>{props.name}</h2> */}
+        <h2>{name}</h2>
+        {/* <p>{props.email}</p> */}
+        <p>{email}</p>
       </div>
     </div>
   );
