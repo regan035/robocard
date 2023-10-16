@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/robocards/static/css/main.3d1cf61f.css",
-    "main.js": "/robocards/static/js/main.d4f8a1b3.js",
-    "static/js/787.f2e96f2a.chunk.js": "/robocards/static/js/787.f2e96f2a.chunk.js",
-    "index.html": "/robocards/index.html",
-    "main.3d1cf61f.css.map": "/robocards/static/css/main.3d1cf61f.css.map",
-    "main.d4f8a1b3.js.map": "/robocards/static/js/main.d4f8a1b3.js.map",
-    "787.f2e96f2a.chunk.js.map": "/robocards/static/js/787.f2e96f2a.chunk.js.map"
+    "main.css": "/robocard/static/css/main.3d1cf61f.css",
+    "main.js": "/robocard/static/js/main.3374d343.js",
+    "static/js/787.f2e96f2a.chunk.js": "/robocard/static/js/787.f2e96f2a.chunk.js",
+    "index.html": "/robocard/index.html",
+    "main.3d1cf61f.css.map": "/robocard/static/css/main.3d1cf61f.css.map",
+    "main.3374d343.js.map": "/robocard/static/js/main.3374d343.js.map",
+    "787.f2e96f2a.chunk.js.map": "/robocard/static/js/787.f2e96f2a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3d1cf61f.css",
-    "static/js/main.d4f8a1b3.js"
+    "static/js/main.3374d343.js"
   ]
 }
